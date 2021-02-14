@@ -1,0 +1,17 @@
+/.git
+/DLLs
+/Doc
+/include
+/Lib
+/libs
+/Scripts
+/tcl
+/Tools
+NEWS.txt
+python.exe
+python3.dll
+python38.dll
+pythonw.exe
+vcruntime140.dll
+LICENSE.txt
+example.py
