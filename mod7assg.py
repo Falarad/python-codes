@@ -15,7 +15,7 @@ def timeStuff():
     print(dateTime + modifier)
 
     delta = timedelta(days=100, hours=10, minutes=13)
-def arcCalculator(feet, inches):
+def distCalculator(feet, inches):
     t = randint(1, 30)
     td = timedelta(seconds = t)
     distance = (feet*12)+inches
@@ -36,5 +36,5 @@ def main():
     timeStuff()
     feet = int(input("How many feet did the object travel? "))
     inches = int(input("How many inches did the object travel? "))
-    arcCalculator(feet, inches)
+    distCalculator(feet, inches)
 main()
