@@ -112,7 +112,7 @@ def main():
     print("Don't worry though, you have me.")
     print("A super advanced AI that will make sure you have the highest probability of winning.")
 
-    for game in itertools.count(0):
+    for game in itertools.count(1):
         #This is where the actual game starts being built.
         hand = Hand()
         enemyOne = Hand(random.choices(skill, weights=(100, 100, 100, 1)))
