@@ -3,8 +3,7 @@ from random import *
 from matplotlib import *
 from pandas import *
 def ggplotGraph(data):
-    title = "Population of Elysee"
-    plot = ggplot(data, aes(x='time', y='population')) + geom_line()
+    ggplot(data, aes(x='time', y='population')) + geom_line()
 def matplotPlot(data):
     pyplot.plot('time', 'population', data = data)
 def main():
