@@ -1,6 +1,6 @@
-import itertools, copy, re, random
+import itertools, copy, re, random, unittest
 
-quitPattern = re.compile('Y^', re.I)
+quitPattern = re.compile('[Y]^', re.I)
 
 class Card:
     def __init__(self):
