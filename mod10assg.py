@@ -10,7 +10,7 @@ def main():
     pop = 107836055
     data = []
     year = 0
-    while(year != 987):
+    while(year != 783):
         data.append([pop, year])
         pop *= 1 + random.random()
         year += 1
