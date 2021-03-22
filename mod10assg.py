@@ -12,7 +12,7 @@ def main():
     year = 0
     while(year != 783):
         data.append([pop, year])
-        pop *= 1 + random()
+        pop *= 0.6 + random()
         year += 1
     data = pandas.DataFrame(data, columns=['population', 'time'])
     ggplotGraph(data)
