@@ -2,7 +2,7 @@ from ggplot import *
 from random import *
 from matplotlib import *
 from pandas import *
-def prettyggplotGraph(data):
+def ggplotGraph(data):
     title = "Population of Elysee"
     plot = ggplot(data, aes(x='time', y='population')) + geom_line()
 def matplotPlot(data):
@@ -16,6 +16,6 @@ def main():
         pop *= 1 + random.random()
         year += 1
     data = pandas.DataFrame(data, columns=['population', 'time'])
-    prettyggplotGraph(data)
+    ggplotGraph(data)
     matplotPlot(data)
 main()
