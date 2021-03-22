@@ -13,7 +13,7 @@ def main():
     year = 0
     while(year != 987):
         data.append([pop, year])
-        pop *= 2
+        pop *= 1 + random.random()
         year += 1
     data = pandas.DataFrame(data, columns=['population', 'time'])
     prettyggplotGraph(data)
