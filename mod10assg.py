@@ -12,9 +12,10 @@ def main():
     year = 0
     while(year != 783):
         data.append([pop, year])
-        pop *= 1 + random.random()
+        pop *= 1 + random()
         year += 1
     data = pandas.DataFrame(data, columns=['population', 'time'])
     ggplotGraph(data)
     matplotPlot(data)
+    print(data)
 main()
