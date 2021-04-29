@@ -1,0 +1,9 @@
+{% extends "base.jinja" %}
+{% block content %}
+  <div class=topArticle>
+    <h2>{{ title }}</h2>
+    <h4>Likes: {{likes}}</h4>
+    {{ body }}
+  </div>
+  <a href="/contact">Have info on touched? Please click here!</a>
+{% endblock %}

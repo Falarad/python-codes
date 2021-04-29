@@ -16,3 +16,4 @@ vcruntime140.dll
 LICENSE.txt
 example.py
 pyclass.py
+final/__pycache__

@@ -1,0 +1,20 @@
+{% extends "base.jinja" %}
+{% block content %}
+  <div class="bg-light form">
+    <form action="/contact" method="post">
+      <div class="row mb-3">
+        <label for="title" class="col-sm-2 col-form-label">Title:</label>
+        <div class="col-sm-10">
+          <input type="text" id="title" name="title" class="form-control" required>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="body" class="col-sm-2 col-form-label">Body:</label>
+        <div class="col-sm-10">
+          <textarea id="body" name="body" class="form-control" required></textarea>
+        </div>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+{% endblock %}
