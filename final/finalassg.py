@@ -6,6 +6,7 @@ app.config['MONGODB_SETTINGS'] = {'host':"mongodb+srv://Xerxes:SnFMtKOI18croJag@
 db = MongoEngine()
 db.init_app(app)
 
+#The next two classes define my models for my database connection
 class Articles(db.Document):
     title = db.StringField()
     body = db.StringField()
@@ -16,14 +17,14 @@ class Tips(db.Document):
     subject = db.StringField()
     body = db.StringField()
 
+#This class is just a special link class so I could store the nav as an array as seen below.
 class Link():
     def __init__(self, url, text):
         self.link = url
         self.text = text
-
-app.run()
 navigation = [Link('/', 'Home'), Link('/contact', 'Contact Us'), Link('/submit', 'Submit an article'), Link('/news', 'All News')]
 
+#from here below is routing
 @app.route('/')
 def index():
     featured = Articles.objects().order_by('-likes').first()
@@ -34,6 +35,7 @@ def news():
     news = Articles.objects().order_by('-likes')
     return render_template('news.jinja', navigation=navigation, news=news)
 
+#I have the two forms submit to themselves for ease of use
 @app.route('/contact', methods=['POST', 'GET'])
 def contact():
     if request.method == 'GET':
